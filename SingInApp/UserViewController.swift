@@ -12,10 +12,24 @@ class UserViewController: UIViewController {
     @IBOutlet var helloUserLabel: UILabel!
     @IBOutlet var emojiLabel: UILabel!
     
+    private var gradientColor: CAGradientLayer = {
+        let gradient = CAGradientLayer()
+        gradient.type = .axial
+        gradient.colors = [
+            UIColor.systemPink.cgColor,
+            UIColor.systemBlue.cgColor,
+        ]
+        gradient.locations = [0, 1]
+        return gradient
+    }()
+    
     var userName: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        gradientColor.frame = view.bounds
+        view.layer.insertSublayer(gradientColor, at: 0)
+        
         emojiLabel.text = "\u{1F44B}"
         helloUserLabel.text = "Hello, \(userName ?? "")!"
     }

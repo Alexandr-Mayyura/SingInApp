@@ -12,8 +12,8 @@ class LogInViewController: UIViewController {
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
-    let userName = "1"
-    let password = "1"
+    private let userName = "1"
+    private let password = "1"
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super .touchesBegan(touches, with: event)
@@ -27,7 +27,7 @@ class LogInViewController: UIViewController {
             userVC.userName = userNameTF.text
         } else {
             presentAlert(
-                titel: "Ooops! \u{1F97A} login or password entered incorrectly",
+                title: "Ooops! \u{1F97A} login or password entered incorrectly",
                 message: "Try again"
             )
         }
@@ -39,16 +39,16 @@ class LogInViewController: UIViewController {
     }
     
     @IBAction func forgotUserNameTapping() {
-        presentAlert(titel: "I WILL HELP", message: "Your name is 1 \u{1F60A}")
+        presentAlert(title: "I WILL HELP", message: "Your name is 1 \u{1F60A}")
     }
     
     @IBAction func forgotPasswordTapping() {
-        presentAlert(titel: "I WILL HELP", message: "Your password is 1 \u{1F60A}")
+        presentAlert(title: "I WILL HELP", message: "Your password is 1 \u{1F60A}")
     }
     
-    func presentAlert(titel: String, message: String) {
+    private func presentAlert(title: String, message: String) {
         let alertVC = UIAlertController(
-            title: titel,
+            title: title,
             message: message,
             preferredStyle: .alert
         )
