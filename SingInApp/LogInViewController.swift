@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LogInViewController: UIViewController {
+class LoginViewController: UIViewController {
     
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
@@ -23,7 +23,7 @@ class LogInViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if userNameTF.text == userName && passwordTF.text == password {
-            guard let userVC = segue.destination as? UserViewController else { return }
+            guard let userVC = segue.destination as? WelcomeViewController else { return }
             userVC.userName = userNameTF.text
         } else {
             presentAlert(
