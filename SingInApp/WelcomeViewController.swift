@@ -12,6 +12,8 @@ class WelcomeViewController: UIViewController {
     @IBOutlet var helloUserLabel: UILabel!
     @IBOutlet var emojiLabel: UILabel!
     
+    var userName: String!
+    
     private var gradientColor: CAGradientLayer = {
         let gradient = CAGradientLayer()
         gradient.type = .axial
@@ -22,9 +24,7 @@ class WelcomeViewController: UIViewController {
         gradient.locations = [0, 1]
         return gradient
     }()
-    
-    var userName: String!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         gradientColor.frame = view.bounds

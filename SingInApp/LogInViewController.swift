@@ -38,11 +38,11 @@ class LoginViewController: UIViewController {
         passwordTF.text = ""
     }
     
-    @IBAction func forgotUserNameTapping() {
+    @IBAction func getShowName() {
         presentAlert(title: "I WILL HELP", message: "Your name is 1 \u{1F60A}")
     }
     
-    @IBAction func forgotPasswordTapping() {
+    @IBAction func getShowPassword() {
         presentAlert(title: "I WILL HELP", message: "Your password is 1 \u{1F60A}")
     }
     
