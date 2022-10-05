@@ -14,7 +14,7 @@ class LoginViewController: UIViewController {
     
     @IBOutlet var button: UIButton!
     
-    private let userLogin = User.userLogin()
+    private let userLogin = User.getUserLogin()
     private let userData = User.getUserData()
     
     override func viewDidLoad() {
