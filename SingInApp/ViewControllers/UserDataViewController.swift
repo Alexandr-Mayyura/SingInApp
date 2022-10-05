@@ -16,13 +16,13 @@ class UserDataViewController: UIViewController {
     @IBOutlet var locationLabel: UILabel!
     @IBOutlet var emailLabel: UILabel!
     
-    var model: UserData?
+    var userDataModel: UserData?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.addVerticalGradientLayer()
-        guard let model = model else { return }
+        guard let model = userDataModel else { return }
         photoUserImageView.image = UIImage(named: "\(model.image)")
         nickNameLabel.text = model.nickName
         ageLabel.text = model.age
@@ -37,7 +37,7 @@ class UserDataViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let userBioVC = segue.destination as? UserBioViewController else { return }
-        guard let model = model else { return }
+        guard let model = userDataModel else { return }
         userBioVC.bio = model.bio
         userBioVC.title = "\(model.name) biography"
     }

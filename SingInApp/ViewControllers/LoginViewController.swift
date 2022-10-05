@@ -11,11 +11,8 @@ class LoginViewController: UIViewController {
     
     @IBOutlet var userNameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
-    
-    @IBOutlet var button: UIButton!
-    
-    private let userLogin = User.getUserLogin()
-    private let userData = User.getUserData()
+
+    private let userData = User.getUserLogin()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,21 +31,21 @@ class LoginViewController: UIViewController {
         
         viewControllers.forEach { viewController in
             if let welcomeVC = viewController as? WelcomeViewController {
-                welcomeVC.userName = userData.name
+                welcomeVC.userName = userData.userBio.name
                 
             } else if let navigationControllerVC = viewController as? UINavigationController {
                 guard let viewController = navigationControllerVC.topViewController else { return }
                 
                 if let userDataVC = viewController as? UserDataViewController {
-                    userDataVC.model = userData
-                    userDataVC.title = userData.name
+                    userDataVC.userDataModel = userData.userBio
+                    userDataVC.title = userData.userBio.name
                 }
             }
         }
     }
     
     @IBAction func enteryWelcomeVC() {
-        guard userNameTF.text == userLogin.login && passwordTF.text == userLogin.password else {
+        guard userNameTF.text == userData.login && passwordTF.text == userData.password else {
             presentAlert(
                 title: "Ooops! 🥺 login or password entered incorrectly",
                 message: "Try again", textfield: passwordTF
@@ -65,8 +62,14 @@ class LoginViewController: UIViewController {
 
     @IBAction func forgotRegisterData(_ sender: UIButton) {
         sender.tag == 0
-        ? presentAlert(title: "I WILL HELP", message: "Your name is 1 😉")
-        : presentAlert(title: "I WILL HELP", message: "Your password is 1 😉")
+        ? presentAlert(
+            title: "I WILL HELP",
+            message: "Your name is \(userData.login) 😉"
+        )
+        : presentAlert(
+            title: "I WILL HELP",
+            message: "Your password is \(userData.password) 😉"
+        )
     }
     
     private func presentAlert(title: String, message: String, textfield: UITextField? = nil) {

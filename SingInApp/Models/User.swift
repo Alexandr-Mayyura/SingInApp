@@ -8,11 +8,21 @@
 struct User {
     let login: String
     let password: String
-    let userBio: UserData?
+    let userBio: UserData
     
     static func getUserLogin() -> User {
-        User(login: "1", password: "1", userBio: nil)
+        User(login: "1", password: "1", userBio: .getUserData())
     }
+}
+
+struct UserData {
+    let image: String
+    let name: String
+    let nickName: String
+    let age: String
+    let location: String
+    let email: String
+    let bio: String
     
     static func getUserData() -> UserData {
         UserData(
@@ -31,14 +41,4 @@ struct User {
 """
         )
     }
-}
-
-struct UserData {
-    let image: String
-    let name: String
-    let nickName: String
-    let age: String
-    let location: String
-    let email: String
-    let bio: String
 }

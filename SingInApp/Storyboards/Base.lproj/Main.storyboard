@@ -86,7 +86,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="button" destination="dLg-Dx-oyl" id="JMb-eP-oIr"/>
                         <outlet property="passwordTF" destination="tmH-SQ-R4y" id="c72-4h-jGj"/>
                         <outlet property="userNameTF" destination="lff-LG-UUW" id="L5M-rK-FPa"/>
                         <segue destination="pnr-OD-BFs" kind="presentation" identifier="showWelcomeVC" modalPresentationStyle="fullScreen" id="zut-QJ-aEo"/>
