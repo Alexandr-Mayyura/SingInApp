@@ -16,6 +16,11 @@ class LoginViewController: UIViewController {
     
     private let userLogin = User(login: "1", password: "1", userBio: nil)
     private let userData = User.getUserData()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.addVerticalGradientLayer()
+    }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super .touchesBegan(touches, with: event)
