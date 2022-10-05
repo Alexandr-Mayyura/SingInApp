@@ -284,7 +284,7 @@
                         <outlet property="ageLabel" destination="6RO-1w-IVX" id="vOV-kG-fm6"/>
                         <outlet property="emailLabel" destination="ax9-mc-mok" id="C4U-ea-qvW"/>
                         <outlet property="locationLabel" destination="ghc-GZ-OF3" id="4WA-Ev-aOY"/>
-                        <outlet property="nameLabel" destination="jlO-6f-IzE" id="kKx-NU-Zwq"/>
+                        <outlet property="nickNameLabel" destination="jlO-6f-IzE" id="a8N-va-Uzk"/>
                         <outlet property="photoUserImageView" destination="Dtu-bP-HAb" id="Pis-IL-CxB"/>
                     </connections>
                 </viewController>
@@ -334,7 +334,7 @@
                     <tabBarItem key="tabBarItem" title="User" image="figure.wave" catalog="system" id="R8d-PX-SoC"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="ZZQ-d3-Lmm">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="97"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="91"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="largeTitleTextAttributes">

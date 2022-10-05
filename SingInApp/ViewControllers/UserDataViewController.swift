@@ -11,7 +11,7 @@ class UserDataViewController: UIViewController {
 
     @IBOutlet var photoUserImageView: UIImageView!
     
-    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var nickNameLabel: UILabel!
     @IBOutlet var ageLabel: UILabel!
     @IBOutlet var locationLabel: UILabel!
     @IBOutlet var emailLabel: UILabel!
@@ -24,7 +24,7 @@ class UserDataViewController: UIViewController {
         view.addVerticalGradientLayer()
         guard let model = model else { return }
         photoUserImageView.image = UIImage(named: "\(model.image)")
-        nameLabel.text = model.nickName
+        nickNameLabel.text = model.nickName
         ageLabel.text = model.age
         locationLabel.text = model.location
         emailLabel.text = model.email
