@@ -10,6 +10,10 @@ struct User {
     let password: String
     let userBio: UserData?
     
+    static func userLogin() -> User {
+        User(login: "1", password: "1", userBio: nil)
+    }
+    
     static func getUserData() -> UserData {
         UserData(
             image: "photo",
