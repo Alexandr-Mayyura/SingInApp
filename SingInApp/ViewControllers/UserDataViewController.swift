@@ -22,11 +22,12 @@ class UserDataViewController: UIViewController {
         super.viewDidLoad()
         
         view.addVerticalGradientLayer()
-        photoUserImageView.image = UIImage(named: "\(model?.image ?? "")")
-        nameLabel.text = model?.nickName
-        ageLabel.text = model?.age
-        locationLabel.text = model?.location
-        emailLabel.text = model?.email
+        guard let model = model else { return }
+        photoUserImageView.image = UIImage(named: "\(model.image)")
+        nameLabel.text = model.nickName
+        ageLabel.text = model.age
+        locationLabel.text = model.location
+        emailLabel.text = model.email
     }
     
     override func viewDidLayoutSubviews() {
@@ -36,8 +37,9 @@ class UserDataViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let userBioVC = segue.destination as? UserBioViewController else { return }
-        userBioVC.bio = model?.bio
-        userBioVC.title = "\(model?.name ?? "") biography"
+        guard let model = model else { return }
+        userBioVC.bio = model.bio
+        userBioVC.title = "\(model.name) biography"
     }
 
    
