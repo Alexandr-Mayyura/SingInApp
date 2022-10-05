@@ -48,7 +48,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func enteryWelcomeVC() {
-        guard userNameTF.text == userLogin.login || passwordTF.text == userLogin.password else {
+        guard userNameTF.text == userLogin.login && passwordTF.text == userLogin.password else {
             presentAlert(
                 title: "Ooops! \u{1F97A} login or password entered incorrectly",
                 message: "Try again", textfield: passwordTF
