@@ -23,8 +23,23 @@ class LoginViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let userVC = segue.destination as? WelcomeViewController else { return }
-        userVC.userName = userData.name
+        
+        guard let tabBarVC = segue.destination as? UITabBarController else { return }
+        guard let viewControllers = tabBarVC.viewControllers else { return }
+        
+        viewControllers.forEach { viewController in
+            if let welcomeVC = viewController as? WelcomeViewController {
+                welcomeVC.userName = userData.name
+                
+            } else if let navigationControllerVC = viewController as? UINavigationController {
+                guard let viewController = navigationControllerVC.topViewController else { return }
+                
+                if let userDataVC = viewController as? UserDataViewController {
+                    userDataVC.model = userData
+                    userDataVC.title = userData.name
+                }
+            }
+        }
     }
     
     @IBAction func enteryWelcomeVC() {
@@ -42,9 +57,7 @@ class LoginViewController: UIViewController {
         userNameTF.text = ""
         passwordTF.text = ""
     }
-    
 
-    
     @IBAction func forgotRegisterData(_ sender: UIButton) {
         sender.tag == 0
         ? presentAlert(title: "I WILL HELP", message: "Your name is 1 \u{1F60A}")

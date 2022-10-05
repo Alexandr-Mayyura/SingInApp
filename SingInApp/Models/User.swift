@@ -12,17 +12,21 @@ struct User {
     
     static func getUserData() -> UserData {
         UserData(
+            image: "photo",
             name: "Александр",
-            age: 35,
+            nickName: "Lock",
+            age: "35",
             location: "Россия, Москва",
             email: "Sonickill@yandex.ru",
-            bio: "")
+            bio: "Родился в Москве.")
     }
 }
 
 struct UserData {
+    let image: String
     let name: String
-    let age: Int
+    let nickName: String
+    let age: String
     let location: String
     let email: String
     let bio: String

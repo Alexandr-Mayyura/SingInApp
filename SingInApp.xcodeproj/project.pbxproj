@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1F3AB47228ECA43700FFA141 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3AB47128ECA43700FFA141 /* User.swift */; };
+		1F3AB47628ECB48E00FFA141 /* UserDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3AB47528ECB48D00FFA141 /* UserDataViewController.swift */; };
+		1F3AB47828ECB4A200FFA141 /* UserBioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3AB47728ECB4A200FFA141 /* UserBioViewController.swift */; };
 		1FA6F76828E843CA00391595 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA6F76728E843CA00391595 /* AppDelegate.swift */; };
 		1FA6F76A28E843CA00391595 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA6F76928E843CA00391595 /* SceneDelegate.swift */; };
 		1FA6F76C28E843CA00391595 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA6F76B28E843CA00391595 /* LoginViewController.swift */; };
@@ -19,6 +21,8 @@
 
 /* Begin PBXFileReference section */
 		1F3AB47128ECA43700FFA141 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		1F3AB47528ECB48D00FFA141 /* UserDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataViewController.swift; sourceTree = "<group>"; };
+		1F3AB47728ECB4A200FFA141 /* UserBioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBioViewController.swift; sourceTree = "<group>"; };
 		1FA6F76428E843CA00391595 /* SingInApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SingInApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FA6F76728E843CA00391595 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FA6F76928E843CA00391595 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +50,8 @@
 			children = (
 				1FA6F76B28E843CA00391595 /* LoginViewController.swift */,
 				1FA6F77B28E858E300391595 /* WelcomeViewController.swift */,
+				1F3AB47528ECB48D00FFA141 /* UserDataViewController.swift */,
+				1F3AB47728ECB4A200FFA141 /* UserBioViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -179,7 +185,9 @@
 				1FA6F76C28E843CA00391595 /* LoginViewController.swift in Sources */,
 				1FA6F77C28E858E300391595 /* WelcomeViewController.swift in Sources */,
 				1FA6F76828E843CA00391595 /* AppDelegate.swift in Sources */,
+				1F3AB47628ECB48E00FFA141 /* UserDataViewController.swift in Sources */,
 				1F3AB47228ECA43700FFA141 /* User.swift in Sources */,
+				1F3AB47828ECB4A200FFA141 /* UserBioViewController.swift in Sources */,
 				1FA6F76A28E843CA00391595 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
