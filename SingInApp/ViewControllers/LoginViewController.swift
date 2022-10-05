@@ -50,7 +50,7 @@ class LoginViewController: UIViewController {
     @IBAction func enteryWelcomeVC() {
         guard userNameTF.text == userLogin.login && passwordTF.text == userLogin.password else {
             presentAlert(
-                title: "Ooops! \u{1F97A} login or password entered incorrectly",
+                title: "Ooops! 🥺 login or password entered incorrectly",
                 message: "Try again", textfield: passwordTF
             )
             return
@@ -65,8 +65,8 @@ class LoginViewController: UIViewController {
 
     @IBAction func forgotRegisterData(_ sender: UIButton) {
         sender.tag == 0
-        ? presentAlert(title: "I WILL HELP", message: "Your name is 1 \u{1F60A}")
-        : presentAlert(title: "I WILL HELP", message: "Your password is 1 \u{1F60A}")
+        ? presentAlert(title: "I WILL HELP", message: "Your name is 1 😉")
+        : presentAlert(title: "I WILL HELP", message: "Your password is 1 😉")
     }
     
     private func presentAlert(title: String, message: String, textfield: UITextField? = nil) {
